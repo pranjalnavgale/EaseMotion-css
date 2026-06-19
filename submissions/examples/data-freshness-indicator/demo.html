@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Freshness Indicator States</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <header class="dashboard-header">
+            <h1>Analytics Overview</h1>
+            <div class="freshness-indicator state-live" aria-live="polite">
+                <span class="indicator-dot"></span>
+                <span class="indicator-text">Live</span>
+                <span class="indicator-age">(updating row-by-row)</span>
+            </div>
+        </header>
+
+        <div class="metrics-grid">
+            <div class="card">
+                <h3>Total Revenue</h3>
+                <p class="metric-value">$45,231.89</p>
+                <div class="freshness-indicator state-recent">
+                    <span class="indicator-dot"></span>
+                    <span class="indicator-text">Updated</span>
+                    <span class="indicator-age">2m ago</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Active Sessions</h3>
+                <p class="metric-value">1,482</p>
+                <div class="freshness-indicator state-refreshing">
+                    <span class="indicator-dot"></span>
+                    <span class="indicator-text">Refreshing</span>
+                    <span class="indicator-age">...</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Conversion Rate</h3>
+                <p class="metric-value">3.24%</p>
+                <div class="freshness-indicator state-stale">
+                    <span class="indicator-dot"></span>
+                    <span class="indicator-text">Stale</span>
+                    <span class="indicator-age">1h ago</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="table-container">
+            <div class="table-header-row">
+                <h2>Recent Transactions</h2>
+                <div class="freshness-indicator state-failed">
+                    <span class="indicator-dot"></span>
+                    <span class="indicator-text">Sync Failed</span>
+                    <span class="indicator-age">Retry scheduled</span>
+                </div>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Status</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#12045</td>
+                        <td>Completed</td>
+                        <td>$120.00</td>
+                    </tr>
+                    <tr>
+                        <td>#12044</td>
+                        <td>Pending</td>
+                        <td>$45.50</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>
